@@ -1,0 +1,46 @@
+# Carregar o arquivo do layout e os dados
+save("draw_b).lms");
+load("draw_b).lms");
+cleardcard;
+
+
+core_thickness_values = linspace(150e-9, 950e-9, 200);  # Espessura do núcleo 
+
+# Arrays para armazenar os resultados
+neff_valuesTE = matrix(2, length(core_thickness_values));
+neff_valuesTM = matrix(2, length(core_thickness_values));
+
+for (i=1:length(core_thickness_values)){
+    core_thickness = core_thickness_values(i);
+    
+    # Redesenhando o guia
+    switchtolayout; # Garantir que o script esteja no modo Layout 
+    setnamed("nf", "x span", core_thickness); # Modificando a espessura do core
+    
+    # Definir o número de modos a ser calculado
+    setnamed("FDE", "number of trial modes", 4);
+    
+    # Executar a simulação e encontrar o neff para cada modo
+    findmodes;
+    
+    for (m=1:2){
+        neff_valuesTE(m, i) = real(getdata("FDE::data::mode"+num2str(2*m-1), "neff"));
+        neff_valuesTM(m, i) = real(getdata("FDE::data::mode"+num2str(2*m), "neff"));
+    }
+}
+
+# Plotar os gráficos para os 4 modos
+for (m=1:2){
+    plot(core_thickness_values*1e9, neff_valuesTE(m,:), "Largura (nm)", "Índice Efetivo (neff)", "Índice efetivo em função da largura do guia", 
+         "plot type=line, linewidth=2");
+    holdon;
+    plot(core_thickness_values*1e9, neff_valuesTM(m,:), "Largura (nm)", "Índice Efetivo (neff)", "Índice efetivo em função da largura do guia", 
+         "plot type=line, linewidth=2");
+    holdon;
+}
+
+setplot("y min", 1.44);
+setplot("y max", 3.55);
+legend("TE0", "TM0", "TE1", "TM1");
+
+exportfigure("neff_vs_largura");
