@@ -1,0 +1,81 @@
+# Carregar o arquivo do layout e os dados
+save("testao.lms");
+load("testao.lms");
+cleardcard;
+
+# Parâmetros iniciais
+nf = 1.44;
+ns = 1.33;
+lambda0 = 1.55e-6;  
+#k0 = 2*pi / lambda0;
+NA = sqrt(nf^2 - ns^2);
+
+core_thickness_values = linspace(0, 2*4.469054e-06, 150);  # Espessura do núcleo para a variação de V [0, 10]
+
+# Arrays para armazenar os resultados
+neff_valuesTE1 = matrix(1, length(core_thickness_values));
+neff_valuesTM1 = matrix(1, length(core_thickness_values));
+neff_valuesTE2 = matrix(1, length(core_thickness_values));
+neff_valuesTM2 = matrix(1, length(core_thickness_values));
+neff_valuesTE3 = matrix(1, length(core_thickness_values));
+neff_valuesTM3 = matrix(1, length(core_thickness_values));
+
+Break = true;
+for (i=1:length(core_thickness_values)){
+    core_thickness = core_thickness_values(i);
+    
+    # Redesenhando o guia
+    switchtolayout; # Garantir que o script esteja no modo Layout 
+    setnamed("waveguide", "y span", core_thickness); # Modificando a espessura do core
+    setnamed("nc", "y", (core_thickness/2 + 2e-6));  # Atualizando as posições do substrato 
+    setnamed("ns", "y", (-core_thickness/2-4.75e-6));
+    
+    # Definir o número de modos a ser calculado
+    setnamed("FDE", "number of trial modes", 12);
+    setnamed("FDE", "NA", NA);
+    setnamed("FDE", "wavelength", lambda0);
+        
+    # Executar a simulação e encontrar o neff
+    findmodes;
+    
+    neff_valuesTE1(i) = real(getdata("FDE::data::mode1", "neff"));
+    neff_valuesTM1(i) = real(getdata("FDE::data::mode2", "neff"));
+    neff_valuesTE2(i) = real(getdata("FDE::data::mode3", "neff"));
+    neff_valuesTM2(i) = real(getdata("FDE::data::mode4", "neff"));
+    neff_valuesTE3(i) = real(getdata("FDE::data::mode5", "neff"));
+    neff_valuesTM3(i) = real(getdata("FDE::data::mode6", "neff"));
+    
+    # Extraindo o valor de V para o qual há mais de um modo propagante
+    if( (neff_valuesTE2(i)>=1.33) & (Break)){
+        a = core_thickness_values(i);
+        Break = false;}
+
+}
+
+# b) Plotar o gráfico de neff versus a
+
+# Primeiro gráfico TE1
+plot(core_thickness_values, neff_valuesTE1, "Espessura do guia (m)", "Índice Efetivo (neff)", "Índice Efetivo em função da Espessura do Guia", 
+     "plot type=line, color=black, linewidth=3");
+holdon;
+
+# Segundo gráfico TM1
+plot(core_thickness_values, neff_valuesTM1, "Espessura do guia (m)", "Índice Efetivo (neff)", "Índice Efetivo em função da Espessura do Guia", 
+     "plot type=line, color=black, pen=--, linewidth=3");
+holdon;
+
+# Terceiro gráfico TE2
+plot(core_thickness_values, neff_valuesTE2, "Espessura do guia (m)", "Índice Efetivo (neff)", "Índice Efetivo em função da Espessura do Guia", 
+     "plot type=line, color=blue, linewidth=3");
+holdon;
+
+# Quarto gráfico TM2
+plot(core_thickness_values, neff_valuesTM2, "Espessura do guia (m)", "Índice Efetivo (neff)", "Índice Efetivo em função da Espessura do Guia", 
+     "plot type=line, color=blue, pen=--, linewidth=3");
+
+
+setplot("y min", 1.33);
+setplot("y max", 1.44);
+legend("TE0", "TM0", "TE1", "TM1");
+
+exportfigure("neff_vs_a");

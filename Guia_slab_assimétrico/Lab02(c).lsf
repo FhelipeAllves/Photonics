@@ -1,0 +1,90 @@
+# Carregar o arquivo do layout e os dados
+load("testao.lms");
+cleardcard;
+
+# Parâmetros iniciais
+nf = 1.44;
+ns = 1.33;
+lambda0 = 1.530e-6; 
+lambda1 = 1.565e-6; 
+wavelengths = [lambda0, lambda1];
+
+core_thickness_values = linspace(0, 2*4.469054e-06, 100);  # Espessura do núcleo para a variação de V [0, 10]
+
+# Arrays para armazenar os resultados 
+neff_valuesTE1_W1 = matrix(1, length(core_thickness_values));
+neff_valuesTE2_W1 = matrix(1, length(core_thickness_values));
+neff_valuesTE1_W2 = matrix(1, length(core_thickness_values));
+neff_valuesTE2_W2 = matrix(1, length(core_thickness_values));
+
+V0_values = matrix(1, length(core_thickness_values));
+V1_values = matrix(1, length(core_thickness_values));
+
+stop = true;
+for (i=1:length(core_thickness_values)){
+    core_thickness = core_thickness_values(i);    
+    
+    # Redesenhando o guia
+    switchtolayout; # Garantir que o script esteja no modo Layout 
+    s
+    setnamed("waveguide", "y span", core_thickness); # Modificando a espessura do core
+    setnamed("nc", "y", (core_thickness/2 + 2e-6));  # Atualizando as posições do substrato 
+    setnamed("ns", "y", (-core_thickness/2-4.75e-6));
+    
+    # Calcular a frequência normalizada (V)
+    V0_values(i) = (2*pi*core_thickness/lambda0) * sqrt(nf^2 - ns^2);
+    V1_values(i) = (2*pi*core_thickness/lambda1) * sqrt(nf^2 - ns^2);
+    
+    # FDE para o novo comprimento de onda 1530
+    setnamed("FDE", "wavelength", wavelengths(1));
+    
+    # Executar a simulação e encontrar o neff
+    findmodes;
+    
+    neff_valuesTE1_W1(i) = real(getdata("FDE::data::mode1", "neff"));
+    neff_valuesTE2_W1(i) = real(getdata("FDE::data::mode3", "neff"));
+    
+#--------------------------------------------------------------------------------------------------------   
+    switchtolayout; # Garantir que o script esteja no modo Layout
+    # FDE para o novo comprimento de onda 1565
+    setnamed("FDE", "wavelength", wavelengths(2));
+    
+    # Executar a simulação e encontrar o neff
+    findmodes;
+    
+    neff_valuesTE1_W2(i) = real(getdata("FDE::data::mode1", "neff"));
+    neff_valuesTE2_W2(i) = real(getdata("FDE::data::mode3", "neff"));
+    
+    #Determinando a espessura máxima para monomodo
+    if(((neff_valuesTE2_W1(i) >= 1.33) or (neff_valuesTE2_W2(i) >= 1.33)) and (stop)){
+        a_max = core_thickness;
+        stop = false; 
+    }
+}
+
+#######Plots
+# --------------------------------------------1530-------------------------------------------------------
+plot(core_thickness_values, neff_valuesTE1_W1, "Espessura do núcleo (m)", "Índice Efetivo (neff)", "neff X a - Banda C", 
+     "plot type=line, color=red, linewidth=2");
+holdon;
+plot(core_thickness_values, neff_valuesTE2_W1, "Espessura do núcleo (m))", "Índice Efetivo (neff)", "neff X a - Banda C", 
+     "plot type=line, color=red, pen=--, linewidth=2");
+holdon;
+
+
+# --------------------------------------------1565---------------------------------------------------------
+plot(core_thickness_values, neff_valuesTE1_W2, "Espessura do núcleo (m)", "Índice Efetivo (neff)", "neff X a - Banda C", 
+     "plot type=line, color=blue, linewidth=2");
+holdon;
+plot(core_thickness_values, neff_valuesTE2_W2, "Espessura do núcleo (m)", "Índice Efetivo (neff)", "neff X a - Banda C", 
+     "plot type=line, color=blue, pen=--, linewidth=2");
+holdon;
+
+
+setplot("y min", 1.33);
+setplot("y max", 1.44);
+setplot("x min", 0);
+setplot("x max", 3e-6);
+legend("TE1-1530nm", "TE2-1530nm", "TE1-1565nm", "TE2-1565nm");
+
+exportfigure("LambdaC");

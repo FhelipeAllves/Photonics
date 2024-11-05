@@ -1,0 +1,66 @@
+# Carregar o arquivo do layout e os dados
+load("testao.lms");
+cleardcard;
+
+# Parâmetros iniciais
+nf = 1.44;
+ns = 1.33;
+lambda0 = 1.55e-6;  
+NA = sqrt(nf^2 - ns^2);
+
+core_thickness_values = linspace(0, 2*4.469054e-06, 120);  # Espessura do núcleo para a variação de V [0, 10]
+
+# Arrays para armazenar os resultados para 12 modos
+neff_valuesTE = matrix(12, length(core_thickness_values));
+neff_valuesTM = matrix(12, length(core_thickness_values));
+V_values = matrix(1, length(core_thickness_values));
+
+Break = true;
+for (i=1:length(core_thickness_values)){
+    core_thickness = core_thickness_values(i);
+    
+    # Redesenhando o guia
+    switchtolayout; # Garantir que o script esteja no modo Layout 
+    setnamed("waveguide", "y span", core_thickness); # Modificando a espessura do core
+    setnamed("nc", "y", (core_thickness/2 + 2e-6));  # Atualizando as posições do substrato 
+    setnamed("ns", "y", (-core_thickness/2-4.75e-6));
+    
+    # Definir o número de modos a ser calculado
+    setnamed("FDE", "number of trial modes", 12);
+    setnamed("FDE", "NA", NA);
+    
+    # Calcular a frequência normalizada (V)
+    V = (pi*core_thickness/lambda0) * sqrt(nf^2 - ns^2);
+    V_values(i) = V;
+    
+    # Executar a simulação e encontrar o neff para cada modo
+    findmodes;
+    
+    for (m=1:6){
+        neff_valuesTE(m, i) = real(getdata("FDE::data::mode"+num2str(2*m-1), "neff"));
+        neff_valuesTM(m, i) = real(getdata("FDE::data::mode"+num2str(2*m), "neff"));
+    }
+    
+    # Extraindo o valor de V para o qual há mais de um modo propagante
+    if( (neff_valuesTE(2,i) >= ns) & (Break)){
+        vmonomode = V;
+        Break = false;
+    }
+}
+
+# Plotar os gráficos para os 12 modos
+#colors = ["black", "blue", "red", "green", "orange", "purple"];
+for (m=1:6){
+    plot(V_values, neff_valuesTE(m,:), "Frequência Normalizada (V)", "Índice Efetivo (neff)", "Índice Efetivo em função da Frequência Normalizada", 
+         "plot type=line, linewidth=2");
+    holdon;
+    plot(V_values, neff_valuesTM(m,:), "Frequência Normalizada (V)", "Índice Efetivo (neff)", "Índice Efetivo em função da Frequência Normalizada", 
+         "plot type=line, pen=--, linewidth=2");
+    holdon;
+}
+
+setplot("y min", ns);
+setplot("y max", nf);
+legend("TE0", "TM0", "TE1", "TM1", "TE2", "TM2", "TE3", "TM3", "TE4", "TM4", "TE5", "TM5");
+
+exportfigure("neff_vs_V_12_modos");
