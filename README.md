@@ -2,7 +2,7 @@
 <h1 align="center">Study and Analysis of Photonic Devices</h1>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/placeholder/image.jpg" width="600" alt="Silicon Photonics">
+  <img src="Img/capa.png" width="600" alt="Silicon Photonics">
 </p>
 
 > **Project Status**: In Development ⚠️
