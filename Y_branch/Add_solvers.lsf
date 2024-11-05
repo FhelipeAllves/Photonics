@@ -1,0 +1,96 @@
+# -----------Laboraório 07--------
+# Nome: Luiz Felipe Barros Alves
+# Mat.: 120110674
+
+switchtolayout;
+
+selectall;
+delete;
+
+create_y_branch;
+
+xspan_solver = wg90Raius * 2 + 3e-6;
+yspan_solver = wg90Raius * 5;
+zspan_solver = 2e-6;
+number_points = 50;
+lambda = [1500e-9, 1600e-9];
+
+test_points = [[-wg90Raius/2, wg90Raius]; 
+               [wg90Raius/2, -wg90Raius]; 
+               [wg90Raius/2, wg90Raius]; 
+               [-wg90Raius/2, -wg90Raius]];
+
+addvarfdtd();
+set('x', wg90Raius);
+set('y', 0);
+set('z', 0);
+set("x span",xspan_solver);
+set("y span",yspan_solver);
+set("z span",zspan_solver);
+set('x0', -wg90Raius + 0.2e-6);
+set('background material', 'SiO2 (Glass) - Palik');
+set('global monitor frequency points', number_points);
+set('test points', test_points);
+set('mesh accuracy', 5); 
+
+# Add Source
+
+addmodesource();
+set('name', 'source_input');
+set('injection axis', 'x');
+set('x', 2*wg90Raius+1e-6);
+set('y', 2*wg90Raius);
+set("y span",wg90Raius);
+set('wavelength start', lambda(1));
+set('wavelength stop', lambda(2));
+set('direction', 'backward');
+
+addmodesource();
+set('name', 'source_input2');
+set('injection axis', 'x');
+set('x', 2*wg90Raius+1e-6);
+set('y', -2*wg90Raius);
+set("y span",wg90Raius);
+set('wavelength start', lambda(1));
+set('wavelength stop', lambda(2));
+set('direction', 'backward');
+
+# Add monitors
+
+addprofile();
+set('name', 'monitor');
+set('x', wg90Raius);
+set('y', 0);
+set("x span",xspan_solver);
+set("y span",yspan_solver);
+
+addpower();
+set('name', 'monitor_input');
+set('monitor type', 5);
+set('x', -0.5e-6);
+set('y', 0);
+set('y span', wg90Raius);
+set('z span', zspan_solver);
+
+addpower();
+set('name', 'monitor_output_1');
+set('monitor type', 5);
+set('x', 2*wg90Raius+0.5e-6);
+set('y', 2*wg90Raius);
+set('y span', wg90Raius);
+set('z span', zspan_solver);
+
+addpower();
+set('name', 'monitor_output_2');
+set('monitor type', 5);
+set('x', 2*wg90Raius+0.5e-6);
+set('y', -2*wg90Raius);
+set('y span', wg90Raius);
+set('z span', zspan_solver);
+
+#addmovie();
+#set('x', 3e-6);
+#set('y', 0);
+#set("y span",7*wg90Raius);
+#set("x span",7*wg90Raius);
+#run();

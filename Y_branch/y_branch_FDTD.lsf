@@ -1,0 +1,70 @@
+# -----------Laboratório 07--------
+# Nome: Luiz Felipe Barros Alves
+# Mat.: 120110674
+
+switchtolayout;
+
+selectall;
+delete;
+
+create_y_branch;
+
+xspan_solver = wg90Raius * 2 + 3e-6;
+yspan_solver = wg90Raius * 5;
+zspan_solver = 2e-6;
+number_points = 50;
+lambda = [1500e-9, 1600e-9];
+
+addfdtd();
+set('x', wg90Raius);
+set('y', 0);
+set('z', 0);
+set("x span",xspan_solver);
+set("y span",yspan_solver);
+set("z span",zspan_solver);
+set('background material', 'SiO2 (Glass) - Palik');
+set('global monitor frequency points', number_points);
+set('global source wavelength start', lambda(1));
+set('global source wavelength stop', lambda(2));
+set('y min bc', 'Symmetric');
+set('mesh accuracy', 2); 
+
+addindex();
+set('name', 'index');
+set('x', wg90Raius);
+set('y', 0);
+set("x span", xspan_solver);
+set("y span", yspan_solver);
+
+addprofile();
+set('name', 'monitor');
+set('x', wg90Raius);
+set('y', 0);
+set("x span", xspan_solver);
+set("y span", yspan_solver);
+
+# Add ports
+
+addport();
+set('name', 'input');
+set('x', -0.5e-6);
+set('y', 0);
+set("y span", wg90Raius/1.5);
+set('direction', 'Forward');
+
+addport();
+set('name', 'output1');
+set('x', xspan_solver - 2.2e-6);
+set('y', wg90Raius*2);
+set("y span", wg90Raius/1.5);
+set('direction', 'Backward');
+
+addport();
+set('name', 'out2');
+set('x', xspan_solver - 2.2e-6);
+set('y', -wg90Raius*2);
+set("y span", wg90Raius/1.5);
+set('direction', 'Backward');
+
+save('y_branch_FDTD');
+run();

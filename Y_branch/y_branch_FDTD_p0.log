@@ -1,0 +1,152 @@
+Ansys Lumerical 2022 R1.3 FDTD Solver Version 8.27.3016 (Windows 64bit)
+ expires (month/day/year): Permanent
+using config file: Ansys Licensing set with ANSYSLMD_LICENSE_FILE
+license host: 1055@10.75.218.24
+current time: qui out 10 11:28:57 2024
+Running on host: DESKTOP-6CRJTJB
+host available memory (GB): 55.774499
+All processes are communicating and ready to proceed to simulation...
+Running fsp file: C:\Program Files\Lumerical\v221\bin\fdtd-engine.exe -t 1 -remote C:/Users/alves/Documents/Lab07/y_branch_FDTD.fsp
+Starting meshing
+Simulation size in gridpoints: 1 x 41 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 41 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 41 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 41 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 41 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 41 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+left is a duplicate key.
+bottom is a duplicate key.
+z1 is a duplicate key.
+z2 is a duplicate key.
+Nx is a duplicate key.
+Ny is a duplicate key.
+Nz is a duplicate key.
+Starting meshing
+Simulation size in gridpoints: 1 x 58 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 58 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 58 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+left is a duplicate key.
+bottom is a duplicate key.
+z1 is a duplicate key.
+z2 is a duplicate key.
+Nx is a duplicate key.
+Ny is a duplicate key.
+Nz is a duplicate key.
+Starting meshing
+Simulation size in gridpoints: 1 x 60 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 60 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+Starting meshing
+Simulation size in gridpoints: 1 x 60 x 26
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+left is a duplicate key.
+bottom is a duplicate key.
+z1 is a duplicate key.
+z2 is a duplicate key.
+Nx is a duplicate key.
+Ny is a duplicate key.
+Nz is a duplicate key.
+number of processors is 1
+processors are distributed as: 1x1x1
+Running 3D Simulation
+Starting meshing
+Simulation size in gridpoints: 320 x 265 x 40
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 1.23438 seconds of CPU time
+0 0
+Starting meshing
+Simulation size in gridpoints: 320 x 265 x 40
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 1.35938 seconds of CPU time
+0 0
+Starting meshing
+Simulation size in gridpoints: 320 x 265 x 40
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 1.15625 seconds of CPU time
+0 0
+finished material properties
+Meshing Time: 3.13306 seconds, Init Electrical Material Time: 0.11182 seconds, Init Magnetic Material Time: 0.0093661
+Using selected optimization level: 2
+Selecting 3d kernel for splitFieldDirection=0 and optLevel=2
+-----------------------------------------
+Beginning initialization of 3D Simulation
+Starting to add sources to simulation
+Adding 3D Mode source propagating in X
+Using frequency dependent profile
+Starting to add boundary conditions to simulation
+Adding 3D PML BC
+Adding 3D PML BC
+Adding 3D Symmetric BC
+Adding 3D PML BC
+Adding 3D PML BC
+Adding 3D PML BC
+Starting to add monitors to Simulation
+Adding analysis monitor
+Adding 3D DFT monitor
+Adding 3D DFT monitor
+Adding 3D DFT monitor
+Adding 3D index monitor
+Adding 3D DFT monitor
+Finished initialization of 3D Simulation
+-----------------------------------------
+All processes are communicating and ready to proceed to simulation...
+Starting 12375 total iterations
+0.387883% complete. Max time remaining: 3 mins, 26 secs. Auto Shutoff: 1
+1.42224% complete. Max time remaining: 3 mins, 20 secs. Auto Shutoff: 1
+2.4566% complete. Max time remaining: 3 mins, 17 secs. Auto Shutoff: 1
+3.49095% complete. Max time remaining: 3 mins, 12 secs. Auto Shutoff: 1
+4.52531% complete. Max time remaining: 3 mins, 11 secs. Auto Shutoff: 1
+5.55966% complete. Max time remaining: 3 mins, 8 secs. Auto Shutoff: 1
+6.59402% complete. Max time remaining: 3 mins, 6 secs. Auto Shutoff: 0.951802
+7.62837% complete. Max time remaining: 3 mins, 4 secs. Auto Shutoff: 0.882858
+9.17991% complete. Max time remaining: 2 mins, 60 secs. Auto Shutoff: 0.825377
+10.7314% complete. Max time remaining: 2 mins, 56 secs. Auto Shutoff: 0.761566
+11.7658% complete. Max time remaining: 2 mins, 54 secs. Auto Shutoff: 0.73353
+12.8002% complete. Max time remaining: 2 mins, 51 secs. Auto Shutoff: 0.714006
+13.8345% complete. Max time remaining: 2 mins, 49 secs. Auto Shutoff: 0.693746
+14.8689% complete. Max time remaining: 2 mins, 47 secs. Auto Shutoff: 0.655032

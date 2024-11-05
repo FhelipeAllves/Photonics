@@ -1,0 +1,90 @@
+# -----------Laboratório 07--------
+# Nome: Luiz Felipe Barros Alves
+# Mat.: 120110674
+
+switchtolayout;
+
+selectall;
+delete;
+
+wg_width = 450e-9;
+wg_height = 220e-9;
+wg90Raius = 5e-6;
+
+addobject("90_bend_wg");
+set("name", "upper_1");
+set("base height", wg_height);
+set("base width", wg_width);
+set("first axis", 'z');
+set('radius', wg90Raius);
+set('rotation 1', 90);
+set('x', 10e-6);
+set('y', 5e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
+
+addobject("90_bend_wg");
+set("name", "upper_2");
+set("base width", wg_width);
+set("base height", wg_height);
+set("first axis", 'z');
+set('rotation 1', -90);
+set('radius', wg90Raius);
+set('x', 0e-6);
+set('y', 5e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
+
+addobject("90_bend_wg");
+set("name", "lower_1");
+set("base height", wg_height);
+set("base width", wg_width);
+set("first axis", 'z');
+set('rotation 1', 360);
+set('radius', wg90Raius);
+set('x', 0e-6);
+set('y', -5e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
+
+addobject("90_bend_wg");
+set("name", "lower_2");
+set("base height", wg_height);
+set("base width", wg_width);
+set("first axis", 'z');
+set('rotation 1', 180);
+set('radius', wg90Raius);
+set('x', 10e-6);
+set('y', -5e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
+
+addrect();
+set("name", "waveguide_input");
+set("x span",2e-6);
+set("y span",wg_width);
+set("z span",wg_height);
+set('x', -1e-6);
+set('y', 0e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
+
+addrect();
+set("name", "waveguide_output_r");
+set("x span",2e-6);
+set("y span",wg_width);
+set("z span",wg_height);
+set('x', 11e-6);
+set('y', 10e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
+
+addrect();
+set("name", "waveguide_output_l");
+set("x span",2e-6);
+set("y span",wg_width);
+set("z span",wg_height);
+set('x', 11e-6);
+set('y', -10e-6);
+set('z', 0e-6);
+set('material', "Si (Silicon) - Palik");
