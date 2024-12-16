@@ -1,0 +1,149 @@
+switchtolayout;  
+deleteall;  
+
+# -----------------------------------------------initial parameters----------------------------------------------------  
+
+# units  
+um = 1e-6;  
+nm = 1e-9;  
+
+# Materials   
+sub_material = 'SiO2 (Glass) - Palik';  
+core_material = 'Si (Silicon) - Palik';  
+core_index = 3.47;  
+sub_index = 1.44;  
+
+# Waveguide parameters  
+wvg_width = 500 * nm;  
+wvg_height = 220 * nm;  
+L_box = 2 * um;  
+L_rect = 3 * um;  
+space = 0.2 * um;  
+
+# Bandwidth operation  
+# C Band simulation: 1520 - 1575 nm (1)  
+# L Band simulation: 1555 - 1635 nm (2)  
+# Article Band:      1500 - 1580 nm (3)  
+
+# wvlngth_start = 1.520 * um;  
+# wvlngth_stop = 1.575 * um;  
+
+# wvlngth_start = 1.555 * um;  
+# wvlngth_stop = 1.635 * um;  
+    
+wvlngth_start = 1.500 * um;  
+wvlngth_stop = 1.580 * um;  
+    
+# Solver dimensions  
+x_FDTD = 0;  
+y_FDTD = 0;  
+z_FDTD = 0;  
+x_span_FDTD = L_box*1.5;  
+y_span_FDTD = L_box*1.5;  
+z_span_FDTD = 0.5*um;  
+
+mesh_x = 20 * nm;  
+mesh_y = 20 * nm;  
+finer_mesh_size = 2.5 * um;  
+
+pml_layers = 12;  # For all profiles, increasing the number of layers will usually lead to lower reflections.  
+mesh_accuracy = 2;  
+condition = 'Anti-Symmetric';  
+
+# ----------------------------------------------------------------------------------------------------------------------  
+
+# -----------------------------------------------Create base geometry---------------------------------------------------  
+
+# INPUT WAVEGUIDE  
+addrect();  
+set('name', 'input wg');  
+# set('material', core_material);  
+set('index', core_index);  
+set('x span', L_rect);  
+set('y span', wvg_width);  
+set('z span', wvg_height);  
+set('y', 0);  
+set('x', -(L_rect/2 + L_box/2));  
+set('z', 0);  
+
+# OUTPUT WAVEGUIDES  
+addrect();  
+set('name', 'output wg top');  
+# set('material', core_material);  
+set('index', core_index);  
+set('x span', L_rect);  
+set('y span', wvg_width);  
+set('z span', wvg_height);  
+set('y', wvg_width/2 + space/2);  
+set('x', L_rect/2 + L_box/2);  
+set('z', 0);  
+
+addrect();  
+set('name', 'output wg bottom');  
+# set('material', core_material);  
+set('index', core_index);  
+set('x span', L_rect);  
+set('y span', wvg_width);  
+set('z span', wvg_height);  
+set('y', -(wvg_width/2 + space/2));  
+set('x', L_rect/2 + L_box/2);  
+set('z', 0);  
+# ----------------------------------------------------------------------------------------------------------------------  
+
+# ------------------------------------------Add Solver, monitors and source---------------------------------------------  
+
+# Add Solver FDTD 2D  
+addfdtd();  
+set('dimension', '2D');  
+# set("background material", sub_material);  
+set('background index', sub_index);  
+set("mesh accuracy", mesh_accuracy);  
+set('force symmetric y mesh', true);  
+set("y min bc", condition);  
+set('pml layers', pml_layers);  
+set("x", x_FDTD);  
+set("x span", x_span_FDTD);  
+set("y", y_FDTD);  
+set("y span", y_span_FDTD);  
+set("z", z_FDTD);  
+
+# Add Mesh  
+addmesh();  
+set("x", x_FDTD);  
+set("x span", finer_mesh_size + 2.0 * mesh_x);  
+set("y", y_FDTD);  
+set("y span", finer_mesh_size);  
+set("z", z_FDTD);  
+set("z span", z_span_FDTD);  
+
+# Add Monitors  
+addpower();  
+set('name', 'opt_fields');  
+set('monitor type', '2D z-normal');  
+set('x', x_FDTD);  
+set('x span', finer_mesh_size);  
+set('y', y_FDTD);  
+set('y span', finer_mesh_size);  
+
+# Add FOM  
+addpower();  
+set('name', 'fom');  
+set('monitor type', '2D x-normal');  
+set('x', finer_mesh_size / 2.0);  
+set('y', 0);  
+set('y span', y_span_FDTD);  
+set('z', z_FDTD);  
+set('z span', 1.2 * um);  
+
+# Add source  
+addmode();  
+set('direction', 'Forward');  
+set('injection axis', 'x-axis');  
+set('mode selection', 'fundamental TE mode');  
+set('override global source settings', false);  
+set('x', -finer_mesh_size / 2);  
+set('y', z_FDTD);  
+set('y span', y_span_FDTD);  
+set('z', z_FDTD);  
+set('z span', 1.2 * um);  
+# ----------------------------------------------------------------------------------------------------------------------  
