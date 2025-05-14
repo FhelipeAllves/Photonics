@@ -1,0 +1,16 @@
+% X-coord, Y-coord, Polarization, wavelength, type, deviceID, params 
+-34, -315, out, TE, 1550, device, CWDM1
+-34, -442, out, TE, 1550, device, CWDM2
+239, -188, out, TE, 1550, device, CWDM3
+239, -315, out, TE, 1550, device, CWDM4
+239, -442, out, TE, 1550, device, CWDM5
+455, -188, out, TE, 1550, device, CWDM6
+455, -315, out, TE, 1550, device, CWDM7
+455, -442, out, TE, 1550, device, CWDM8
+-34, -61, TE, 1550, device, CWDM1, comment
+239, -61, TE, 1550, device, CWDM2, comment
+455, -61, TE, 1550, device, CWDM3, comment
+
+% X-coord, Y-coord, deviceID, padName, params 
+
+% X-coord, Y-coord, recipeID, params 

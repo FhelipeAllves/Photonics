@@ -1,0 +1,154 @@
+Devices:
+  CWDM1:
+    device_id: CWDM1
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -34.0
+    - -61.0
+    polarization: TE
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: '1550'
+  CWDM2:
+    device_id: CWDM2
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 239.0
+    - -61.0
+    polarization: TE
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: '1550'
+  CWDM3:
+    device_id: CWDM3
+    device_type: device
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 455.0
+    - -61.0
+    polarization: TE
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: '1550'
+  device_CWDM1:
+    device_id: device_CWDM1
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -34.0
+    - -315.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM2:
+    device_id: device_CWDM2
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - -34.0
+    - -442.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM3:
+    device_id: device_CWDM3
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 239.0
+    - -188.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM4:
+    device_id: device_CWDM4
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 239.0
+    - -315.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM5:
+    device_id: device_CWDM5
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 239.0
+    - -442.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM6:
+    device_id: device_CWDM6
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 455.0
+    - -188.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM7:
+    device_id: device_CWDM7
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 455.0
+    - -315.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+  device_CWDM8:
+    device_id: device_CWDM8
+    device_type: '1550'
+    electricalCoordinates: []
+    opticalCoordinates:
+    - 455.0
+    - -442.0
+    polarization: out
+    sequences:
+    - CWDM(wavelength_sweep_ida)
+    wavelength: TE
+Sequences:
+  CWDM(wavelength_sweep_ida):
+    Runtime: 8.75
+    results_info:
+      csv: 'True'
+      foldername: ''
+      legend: 'True'
+      mat: 'True'
+      num_plots: '1'
+      pdf: 'True'
+      pkl: 'False'
+      plottitle: WavelengthSweep
+      save_location: ''
+      saveplot: 'True'
+      visual: 'True'
+      xscale: '1'
+      xtitle: Wavelength (nm)
+      yscale: '1'
+      ytitle: Power (dBm)
+    variables:
+      Initialrange: '-20'
+      Laser Output: High Power
+      Mode: CONT
+      Numscans: '1'
+      Power: '1'
+      Power Unit: dBm
+      RangeDec: '20'
+      Start: '1530'
+      Step: '0.5'
+      Stop: '1565'
+      Sweep Speed: auto
+      Upper Limit: '0'
