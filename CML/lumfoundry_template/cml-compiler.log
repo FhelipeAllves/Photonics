@@ -1,0 +1,610 @@
+
+########################################################START OF LOG SESSION##############################################################
+
+CURRENT DATE AND TIME: 12/06/2025 12:51:38
+
+CML Compiler executable path: C:\Program Files\Lumerical\v242\CML_Compiler\bin\\cml-compiler.pyc
+Executed command: cml-compiler install -t lumfoundry_template.json 
+12/06/2025 12:51:47 -----------------------------------------------
+12/06/2025 12:51:47 Lumerical CML Compiler - Version: 3.9.3941
+12/06/2025 12:51:47 Compiled with INTERCONNECT - Version: 9.14.3941
+12/06/2025 12:51:47 -----------------------------------------------
+12/06/2025 12:51:47 Installing library...
+12/06/2025 12:51:47 ERROR: CML Compiler exited prematurely with the following error:
+12/06/2025 12:51:47 Exception('Directory does not exist, or the specified file is not a valid cml file!')
+#########################################################END OF LOG SESSION###############################################################
+
+########################################################START OF LOG SESSION##############################################################
+
+CURRENT DATE AND TIME: 13/06/2025 17:04:08
+
+CML Compiler executable path: C:\Program Files\Lumerical\v242\CML_Compiler\bin\\cml-compiler.pyc
+Executed command: cml-compiler library -t lumfoundry_template.json 
+13/06/2025 17:04:08 -----------------------------------------------
+13/06/2025 17:04:08 Lumerical CML Compiler - Version: 3.9.3941
+13/06/2025 17:04:08 Compiled with INTERCONNECT - Version: 9.14.3941
+13/06/2025 17:04:08 -----------------------------------------------
+13/06/2025 17:04:10 Building compact models...
+13/06/2025 17:04:12 [01/66] apd_c
+13/06/2025 17:04:12            Validating apd_c.json source data... PASSED!
+
+13/06/2025 17:04:12            Building compact model... SUCCESS!
+
+13/06/2025 17:04:12 [02/66] apd_stat_c
+13/06/2025 17:04:12            Validating apd_stat_c.json source data... PASSED!
+
+13/06/2025 17:04:12            Building compact model... SUCCESS!
+
+13/06/2025 17:04:12 [03/66] custom_veriloga_eps
+13/06/2025 17:04:12            Validating custom_veriloga_eps.json source data... PASSED!
+
+13/06/2025 17:04:12            Building compact model... SKIPPED! INTERCONNECT CML is not supported for the current element.
+
+13/06/2025 17:04:12 [04/66] dc_strip_te_c
+13/06/2025 17:04:12            Validating dc_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:12            Building compact model... SUCCESS!
+
+13/06/2025 17:04:12 [05/66] eam_te_c
+13/06/2025 17:04:12            Validating eam_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [06/66] fiber_array_8x8_stat_c
+13/06/2025 17:04:13            Validating fiber_array_8x8_stat_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [07/66] gc_fitted_stat_te_c
+13/06/2025 17:04:13            Validating gc_fitted_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [08/66] gc_fitted_te_c
+13/06/2025 17:04:13            Validating gc_fitted_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [09/66] gc_raw_spar_stat_te_c
+13/06/2025 17:04:13            Validating gc_raw_spar_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [10/66] gc_strip_te_c
+13/06/2025 17:04:13            Validating gc_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [11/66] mmi_1x2_stat_strip_te_c
+13/06/2025 17:04:13            Validating mmi_1x2_stat_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [12/66] mmi_1x2_strip_te_c
+13/06/2025 17:04:13            Validating mmi_1x2_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:13 [13/66] mmi_1x2_strip_te_c_thermal
+13/06/2025 17:04:13            Validating mmi_1x2_strip_te_c_thermal.json source data... PASSED!
+
+13/06/2025 17:04:13            Building compact model... SUCCESS!
+
+13/06/2025 17:04:14 [14/66] mzi_thermal_2x2_te_c
+13/06/2025 17:04:14            Validating mzi_thermal_2x2_te_c.json source data... PASSED!
+
+13/06/2025 17:04:14            Building compact model... SUCCESS!
+
+13/06/2025 17:04:14 [15/66] mzi_thermal_unbalanced_te_c
+13/06/2025 17:04:14            Validating mzi_thermal_unbalanced_te_c.json source data... PASSED!
+
+13/06/2025 17:04:14            Building compact model... SUCCESS!
+
+13/06/2025 17:04:14 [16/66] mzm_2x2_stat_fom_te_c
+13/06/2025 17:04:14            Validating mzm_2x2_stat_fom_te_c.json source data... PASSED!
+
+13/06/2025 17:04:14            Building compact model... SUCCESS!
+
+13/06/2025 17:04:14 [17/66] mzm_2x2_te_c
+13/06/2025 17:04:14            Validating mzm_2x2_te_c.json source data... PASSED!
+
+13/06/2025 17:04:14            Building compact model... SUCCESS!
+
+13/06/2025 17:04:14 [18/66] mzm_balanced_te_c
+13/06/2025 17:04:14            Validating mzm_balanced_te_c.json source data... PASSED!
+
+13/06/2025 17:04:14            Building compact model... SUCCESS!
+
+13/06/2025 17:04:14 [19/66] mzm_stat_fom_unbalanced_te_c
+13/06/2025 17:04:14            Validating mzm_stat_fom_unbalanced_te_c.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [20/66] mzm_stat_unbalanced_te_c
+13/06/2025 17:04:15            Validating mzm_stat_unbalanced_te_c.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [21/66] mzm_unbalanced_te_c
+13/06/2025 17:04:15            Validating mzm_unbalanced_te_c.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [22/66] mzm_unbalanced_tw_te_c
+13/06/2025 17:04:15            Validating mzm_unbalanced_tw_te_c.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [23/66] pd_c
+13/06/2025 17:04:15            Validating pd_c.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [24/66] pd_harmonic
+13/06/2025 17:04:15            Validating pd_harmonic.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [25/66] pd_pcell_c
+13/06/2025 17:04:15            Validating pd_pcell_c.json source data... PASSED!
+
+13/06/2025 17:04:15            Building compact model... SUCCESS!
+
+13/06/2025 17:04:15 [26/66] pd_pcell_stat_c
+13/06/2025 17:04:15            Validating pd_pcell_stat_c.json source data... PASSED!
+
+13/06/2025 17:04:16            Building compact model... SUCCESS!
+
+13/06/2025 17:04:16 [27/66] pd_stat_c
+13/06/2025 17:04:16            Validating pd_stat_c.json source data... PASSED!
+
+13/06/2025 17:04:16            Building compact model... SUCCESS!
+
+13/06/2025 17:04:16 [28/66] pdc_strip_c
+13/06/2025 17:04:16            Validating pdc_strip_c.json source data... PASSED!
+
+13/06/2025 17:04:16            Building compact model... SUCCESS!
+
+13/06/2025 17:04:16 [29/66] ps_pin_te_c
+13/06/2025 17:04:16            Validating ps_pin_te_c.json source data... PASSED!
+
+13/06/2025 17:04:16            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [30/66] ps_pn_stat_te_c
+13/06/2025 17:04:17            Validating ps_pn_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [31/66] ps_pn_te_c
+13/06/2025 17:04:17            Validating ps_pn_te_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [32/66] ps_pn_tw_te_c
+13/06/2025 17:04:17            Validating ps_pn_tw_te_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [33/66] ps_thermal_stat_te_c
+13/06/2025 17:04:17            Validating ps_thermal_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [34/66] ps_thermal_te_c
+13/06/2025 17:04:17            Validating ps_thermal_te_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [35/66] ptaper_pr_c
+13/06/2025 17:04:17            Validating ptaper_pr_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [36/66] ptaper_strip_c
+13/06/2025 17:04:17            Validating ptaper_strip_c.json source data... PASSED!
+
+13/06/2025 17:04:17            Building compact model... SUCCESS!
+
+13/06/2025 17:04:17 [37/66] rm_db_pcell_strip_te_c
+13/06/2025 17:04:17            Validating rm_db_pcell_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:18            Building compact model... SUCCESS!
+
+13/06/2025 17:04:18 [38/66] rm_db_stat_fom_strip_te_c
+13/06/2025 17:04:18            Validating rm_db_stat_fom_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:18            Building compact model... SUCCESS!
+
+13/06/2025 17:04:18 [39/66] rm_db_strip_te_c
+13/06/2025 17:04:18            Validating rm_db_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:18            Building compact model... SUCCESS!
+
+13/06/2025 17:04:18 [40/66] rm_stat_fom_strip_te_c
+13/06/2025 17:04:18            Validating rm_stat_fom_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:18            Building compact model... SUCCESS!
+
+13/06/2025 17:04:18 [41/66] rm_stat_strip_te_c
+13/06/2025 17:04:18            Validating rm_stat_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:18            Building compact model... SUCCESS!
+
+13/06/2025 17:04:18 [42/66] rm_strip_te_c
+13/06/2025 17:04:18            Validating rm_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:18            Building compact model... SUCCESS!
+
+13/06/2025 17:04:19 [43/66] rr_stat_strip_te_c
+13/06/2025 17:04:19            Validating rr_stat_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:19            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [44/66] rr_strip_te_c
+13/06/2025 17:04:20            Validating rr_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [45/66] rs_strip_te_c
+13/06/2025 17:04:20            Validating rs_strip_te_c.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [46/66] scripted_grating_stat
+13/06/2025 17:04:20            Validating scripted_grating_stat.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [47/66] scripted_wg
+13/06/2025 17:04:20            Validating scripted_wg.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [48/66] thermal_switch_2x2_stat_te_c
+13/06/2025 17:04:20            Validating thermal_switch_2x2_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [49/66] thermal_switch_2x2_te_c
+13/06/2025 17:04:20            Validating thermal_switch_2x2_te_c.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:20 [50/66] thermal_switch_stat_te_c
+13/06/2025 17:04:20            Validating thermal_switch_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:20            Building compact model... SUCCESS!
+
+13/06/2025 17:04:21 [51/66] thermal_switch_te_c
+13/06/2025 17:04:21            Validating thermal_switch_te_c.json source data... PASSED!
+
+13/06/2025 17:04:21            Building compact model... SUCCESS!
+
+13/06/2025 17:04:21 [52/66] voa_stat_te_c
+13/06/2025 17:04:21            Validating voa_stat_te_c.json source data... PASSED!
+
+13/06/2025 17:04:21            Building compact model... SUCCESS!
+
+13/06/2025 17:04:22 [53/66] wg_back_annotation
+13/06/2025 17:04:22            Validating wg_back_annotation.json source data... PASSED!
+
+13/06/2025 17:04:22            Building compact model... SUCCESS!
+
+13/06/2025 17:04:22 [54/66] wg_backscatter
+13/06/2025 17:04:22            Validating wg_backscatter.json source data... PASSED!
+
+13/06/2025 17:04:22            Building compact model... SUCCESS!
+
+13/06/2025 17:04:22 [55/66] wg_bend_90
+13/06/2025 17:04:22            Validating wg_bend_90.json source data... PASSED!
+
+13/06/2025 17:04:22            Building compact model... SUCCESS!
+
+13/06/2025 17:04:22 [56/66] wg_connector
+13/06/2025 17:04:22            Validating wg_connector.json source data... PASSED!
+
+13/06/2025 17:04:22            Building compact model... SUCCESS!
+
+13/06/2025 17:04:22 [57/66] wg_stat_strip_straight_c
+13/06/2025 17:04:22            Validating wg_stat_strip_straight_c.json source data... PASSED!
+
+13/06/2025 17:04:22            Building compact model... SUCCESS!
+
+13/06/2025 17:04:22 [58/66] wg_stat_strip_straight_parameterized
+13/06/2025 17:04:22            Validating wg_stat_strip_straight_parameterized.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [59/66] wg_strip_arc_parameterized
+13/06/2025 17:04:23            Validating wg_strip_arc_parameterized.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [60/66] wg_strip_sbend_parameterized
+13/06/2025 17:04:23            Validating wg_strip_sbend_parameterized.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [61/66] wg_strip_straight_c
+13/06/2025 17:04:23            Validating wg_strip_straight_c.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [62/66] wg_strip_straight_parameterized
+13/06/2025 17:04:23            Validating wg_strip_straight_parameterized.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [63/66] container_element_child1
+13/06/2025 17:04:23            Validating container_element_child1.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [64/66] container_element_child2
+13/06/2025 17:04:23            Validating container_element_child2.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [65/66] container_example
+13/06/2025 17:04:23            Validating container_example.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:23 [66/66] compound_rm_stat
+13/06/2025 17:04:23            Validating compound_rm_stat.json source data... PASSED!
+
+13/06/2025 17:04:23            Building compact model... SUCCESS!
+
+13/06/2025 17:04:24 "custom_MZM" added as user-created element.
+13/06/2025 17:04:28 Data validation has 0 warnings and 0 errors. See cml-compiler.state for details.
+13/06/2025 17:04:29 
+13/06/2025 17:04:29 CML Compiler executed with specification defined in lumfoundry_template.json
+13/06/2025 17:04:29 
+13/06/2025 17:04:29 
+13/06/2025 17:04:29 #############################################
+13/06/2025 17:04:29 Finished compiling your lumfoundry_template library!
+13/06/2025 17:04:29 CML Compiler outputs are located at C:\Users\alves\Documents\Photonics\CML\lumfoundry_template\artifacts.
+13/06/2025 17:04:29 
+13/06/2025 17:04:29 	* INTERCONNECT CML files: C:\Users\alves\Documents\Photonics\CML\lumfoundry_template\artifacts\interconnect
+#########################################################END OF LOG SESSION###############################################################
+
+########################################################START OF LOG SESSION##############################################################
+
+CURRENT DATE AND TIME: 13/06/2025 17:04:29
+
+CML Compiler executable path: C:\Program Files\Lumerical\v242\CML_Compiler\bin\\cml-compiler.pyc
+Executed command: cml-compiler install -t lumfoundry_template.json 
+13/06/2025 17:04:32 -----------------------------------------------
+13/06/2025 17:04:32 Lumerical CML Compiler - Version: 3.9.3941
+13/06/2025 17:04:32 Compiled with INTERCONNECT - Version: 9.14.3941
+13/06/2025 17:04:32 -----------------------------------------------
+13/06/2025 17:04:32 Installing library...
+13/06/2025 17:04:33 Installed library! Library (CML) information:
+13/06/2025 17:04:33 {
+13/06/2025 17:04:33   "INTERCONNECT Version": "9.14.3941",
+13/06/2025 17:04:33   "Library Name": "lumfoundry_template",
+13/06/2025 17:04:33   "Library Version": "4.0"
+13/06/2025 17:04:33 }
+13/06/2025 17:04:34 
+13/06/2025 17:04:34 CML Compiler executed with specification defined in lumfoundry_template.json
+#########################################################END OF LOG SESSION###############################################################
+
+########################################################START OF LOG SESSION##############################################################
+
+CURRENT DATE AND TIME: 13/06/2025 17:04:35
+
+CML Compiler executable path: C:\Program Files\Lumerical\v242\CML_Compiler\bin\\cml-compiler.pyc
+Executed command: cml-compiler test -t lumfoundry_template.json 
+13/06/2025 17:04:37 -----------------------------------------------
+13/06/2025 17:04:37 Lumerical CML Compiler - Version: 3.9.3941
+13/06/2025 17:04:37 Compiled with INTERCONNECT - Version: 9.14.3941
+13/06/2025 17:04:37 -----------------------------------------------
+13/06/2025 17:04:37 Building QA scripts...
+13/06/2025 17:04:37 [01/66] apd_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [02/66] apd_stat_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [03/66] custom_veriloga_eps
+13/06/2025 17:04:37            Skipped building QA tests.
+13/06/2025 17:04:37 [04/66] dc_strip_te_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [05/66] eam_te_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [06/66] fiber_array_8x8_stat_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [07/66] gc_fitted_stat_te_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [08/66] gc_fitted_te_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:37 [09/66] gc_raw_spar_stat_te_c
+13/06/2025 17:04:37            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [10/66] gc_strip_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [11/66] mmi_1x2_stat_strip_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [12/66] mmi_1x2_strip_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [13/66] mmi_1x2_strip_te_c_thermal
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [14/66] mzi_thermal_2x2_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [15/66] mzi_thermal_unbalanced_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [16/66] mzm_2x2_stat_fom_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [17/66] mzm_2x2_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [18/66] mzm_balanced_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [19/66] mzm_stat_fom_unbalanced_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [20/66] mzm_stat_unbalanced_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [21/66] mzm_unbalanced_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [22/66] mzm_unbalanced_tw_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [23/66] pd_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [24/66] pd_harmonic
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [25/66] pd_pcell_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [26/66] pd_pcell_stat_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [27/66] pd_stat_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [28/66] pdc_strip_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [29/66] ps_pin_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [30/66] ps_pn_stat_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [31/66] ps_pn_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:38 [32/66] ps_pn_tw_te_c
+13/06/2025 17:04:38            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [33/66] ps_thermal_stat_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [34/66] ps_thermal_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [35/66] ptaper_pr_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [36/66] ptaper_strip_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [37/66] rm_db_pcell_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [38/66] rm_db_stat_fom_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [39/66] rm_db_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [40/66] rm_stat_fom_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [41/66] rm_stat_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [42/66] rm_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [43/66] rr_stat_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [44/66] rr_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [45/66] rs_strip_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [46/66] scripted_grating_stat
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [47/66] scripted_wg
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [48/66] thermal_switch_2x2_stat_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [49/66] thermal_switch_2x2_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [50/66] thermal_switch_stat_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [51/66] thermal_switch_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [52/66] voa_stat_te_c
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [53/66] wg_back_annotation
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [54/66] wg_backscatter
+13/06/2025 17:04:39            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:39 [55/66] wg_bend_90
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [56/66] wg_connector
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [57/66] wg_stat_strip_straight_c
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [58/66] wg_stat_strip_straight_parameterized
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [59/66] wg_strip_arc_parameterized
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [60/66] wg_strip_sbend_parameterized
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [61/66] wg_strip_straight_c
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [62/66] wg_strip_straight_parameterized
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [63/66] container_element_child1
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [64/66] container_element_child2
+13/06/2025 17:04:40            Building INTERCONNECT QA tests... SUCCESS!
+
+13/06/2025 17:04:40 [65/66] container_example
+13/06/2025 17:04:40            Removed INTERCONNECT tests for container_element_child1
+13/06/2025 17:04:40            Building QA tests for container container_example, container_element_child1...SUCCESS!
+
+13/06/2025 17:04:40            Removed INTERCONNECT tests for container_element_child2
+13/06/2025 17:04:40            Building QA tests for container container_example, container_element_child2...SUCCESS!
+
+13/06/2025 17:04:40 [66/66] compound_rm_stat
+13/06/2025 17:04:40 There are 66 elements in the list
+13/06/2025 17:04:40 64 top level elements were found
+13/06/2025 17:04:40 1 container elements were found
+13/06/2025 17:04:40 2 children were found
+13/06/2025 17:04:40 2 original subelement tests were removed
+13/06/2025 17:04:40 Total number of INTERCONNECT tests is 64
+13/06/2025 17:04:40 
+13/06/2025 17:04:40 CML Compiler executed with specification defined in lumfoundry_template.json
+#########################################################END OF LOG SESSION###############################################################

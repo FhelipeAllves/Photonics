@@ -1,0 +1,14 @@
+
+########################################################START OF LOG SESSION##############################################################
+
+CURRENT DATE AND TIME: 11/06/2025 15:51:55
+
+CML Compiler executable path: C:\Program Files\Lumerical\v242\CML_Compiler\bin\\cml-compiler.pyc
+Executed command: cml-compiler template -n lumfoundry_template 
+11/06/2025 15:51:55 -----------------------------------------------
+11/06/2025 15:51:55 Lumerical CML Compiler - Version: 3.9.3941
+11/06/2025 15:51:55 Compiled with INTERCONNECT - Version: 9.14.3941
+11/06/2025 15:51:55 -----------------------------------------------
+11/06/2025 15:51:56 Deploying lumfoundry_template...
+11/06/2025 15:51:56 Extracted default foundry template to C:\Users\alves\Documents\Photonics\CML\lumfoundry_template
+#########################################################END OF LOG SESSION###############################################################
